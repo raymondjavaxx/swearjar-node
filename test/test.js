@@ -24,6 +24,11 @@ describe('swearjar.censor', function () {
     assert.equal(swearjar.censor('fuck you john doe bitch'), "**** you john doe *****");
   });
 
+  it('should handle edgecases', function () {
+    assert.equal(swearjar.censor("Assasin's Creed Ass"), "Assasin's Creed ***");
+    assert.equal(swearjar.censor("Assasin's Creed\nAss"), "Assasin's Creed\n***");
+  });
+
 });
 
 describe('swearjar.scorecard', function () {
