@@ -2,6 +2,8 @@
 
 Profanity detection and filtering library.
 
+[![Build Status](https://travis-ci.org/raymondjavaxx/swearjar-node.svg?branch=master)](https://travis-ci.org/raymondjavaxx/swearjar-node)
+
 ## Installation
 
     npm install --save swearjar
