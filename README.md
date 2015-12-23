@@ -34,6 +34,8 @@ Generates a report from the given text.
 
 Loads a dictionary of words to be used as filter.
 
+NOTE: A US English default list located in the config directory is included and loaded by default.
+
     swearjar.loadBadWords('./config/profanity.json');
 
 A dictionary is just a plain JSON file containing an object where its keys are the words to check for and the values are arrays of categories where the words fall in.
