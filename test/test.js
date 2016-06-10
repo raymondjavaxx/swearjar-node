@@ -43,5 +43,20 @@ describe('swearjar.scorecard', function () {
       insult: 1
     });
   });
+});
 
+  describe('should handle object properties', function() {
+
+    it('should not return "should" as profane', function () {
+
+      Object.defineProperty(Object.prototype, 'should', {
+        set: function(){},
+        get: function(){
+          return this;
+        },
+        configurable: true
+      });
+
+      assert.equal(swearjar.profane('this should not be profane'), false);
+    });
 });
