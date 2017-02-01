@@ -10,6 +10,14 @@ Profanity detection and filtering library.
 
 ## Usage
 
+### swearjar.isSubstringProfane(text, start, partialLength)
+
+Returns true if any substring within the given string contains profanity.
+
+    var swearjar = require('swearjar');
+    swearjar.isSubstringProfane("hello there"); // false
+    swearjar.isSubstringProfane("hellof-bombthere"); // true
+
 ### swearjar.profane(text)
 
 Returns true if the given string contains profanity.

@@ -1,6 +1,23 @@
 var assert = require('assert');
 var swearjar = require('../lib/swearjar.js');
 
+describe('swearjar.isSubstringProfane', function () {
+
+  it('should should detect bad words within a string', function () {
+    assert.equal(swearjar.isSubstringProfane('i love you john doe'), false);
+    assert.equal(swearjar.isSubstringProfane('fuckyoujohndoe'), true);
+  });
+
+  it('should detect uppercase bad words within a string', function () {
+    assert.equal(swearjar.isSubstringProfane('FUCKyoujohndoe'), true);
+  });
+
+  it('should detect mixedcase bad words within a string', function () {
+    assert.equal(swearjar.isSubstringProfane('FuCkyoujohndoe'), true);
+  });
+
+});
+
 describe('swearjar.profane', function () {
 
   it('should should detect bad words', function () {
