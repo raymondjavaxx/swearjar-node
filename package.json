@@ -1,5 +1,5 @@
 {
-  "name": "@honeyscience/swearjar",
+  "name": "@honeyscience/honey-swearjar",
   "description": "Profanity detection and filtering library.",
   "version": "1.0.0",
   "homepage": "https://github.com/honeyscience/swearjar-node",
