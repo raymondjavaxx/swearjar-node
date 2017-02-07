@@ -1,22 +1,20 @@
 {
-  "name": "swearjar",
+  "name": "@honeyscience/swearjar",
   "description": "Profanity detection and filtering library.",
   "version": "1.0.0",
-  "homepage": "https://github.com/raymondjavaxx/swearjar-node",
+  "homepage": "https://github.com/honeyscience/swearjar-node",
   "keywords": ["swear", "curse", "unallowed", "profanity", "clean", "filter", "badwords"],
   "author": {
-    "name": "Ramon Torres",
-    "email": "raymondjavaxx@gmail.com",
-    "url": "https://github.com/raymondjavaxx"
+    "name": "The Honey Team"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:raymondjavaxx/swearjar-node.git"
+    "url": "git@github.com:honeyscience/swearjar-node.git"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/raymondjavaxx/swearjar-node/LICENSE"
+      "url": "https://github.com/honeyscience/swearjar-node/LICENSE"
     }
   ],
   "main": "lib/swearjar",
