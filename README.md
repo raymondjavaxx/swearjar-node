@@ -1,6 +1,6 @@
 # swearjar-node
 
-Profanity detection and filtering library.
+Profanity detection and filtering library.  Forked from original repo to add functionality to check substrings.
 
 [![Build Status](https://travis-ci.org/raymondjavaxx/swearjar-node.svg?branch=master)](https://travis-ci.org/raymondjavaxx/swearjar-node)
 
@@ -9,6 +9,14 @@ Profanity detection and filtering library.
     npm install --save swearjar
 
 ## Usage
+
+### swearjar.isSubstringProfane(text, start, partialLength)
+
+Returns true if any substring within the given string contains profanity.
+
+    var swearjar = require('swearjar');
+    swearjar.isSubstringProfane("hello there"); // false
+    swearjar.isSubstringProfane("hellof-bombthere"); // true
 
 ### swearjar.profane(text)
 
