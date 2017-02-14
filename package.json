@@ -5,7 +5,8 @@
   "homepage": "https://github.com/honeyscience/swearjar-node",
   "keywords": ["swear", "curse", "unallowed", "profanity", "clean", "filter", "badwords"],
   "author": {
-    "name": "The Honey Team"
+    "name": "The Honey Team",
+    "url": "https://www.github.com/honeyscience"
   },
   "repository": {
     "type": "git",
