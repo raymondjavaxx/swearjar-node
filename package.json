@@ -1,16 +1,10 @@
 {
   "name": "@honeyscience/honey-swearjar",
   "description": "Profanity detection and filtering library.",
-  "version": "1.0.0",
-  "homepage": "https://github.com/honeyscience/swearjar-node",
-  "keywords": ["swear", "curse", "unallowed", "profanity", "clean", "filter", "badwords"],
+  "version": "1.0.1",
   "author": {
     "name": "The Honey Team",
     "url": "https://www.github.com/honeyscience"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:honeyscience/swearjar-node.git"
   },
   "licenses": [
     {
@@ -18,14 +12,23 @@
       "url": "https://github.com/honeyscience/swearjar-node/LICENSE"
     }
   ],
-  "main": "lib/swearjar",
+  "homepage": "https://github.com/honeyscience/swearjar-node",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:honeyscience/swearjar-node.git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "honey-eslint ./src ./test",
+    "test": "mocha"
+  },
   "engines": {
-    "node": ">= 0.6.0"
+    "node": ">= 6.9.0"
   },
   "devDependencies": {
-    "mocha": "~1.18.2"
-  },
-  "scripts": {
-    "test": "mocha"
+    "@honeyscience/eslint-config": "^1.1.2",
+    "@honeyscience/honey-dev-tools": "^3.30.0",
+    "eslint": "^4.11.0",
+    "mocha": "^4.0.1"
   }
 }
