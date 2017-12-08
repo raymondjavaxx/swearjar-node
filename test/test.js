@@ -60,3 +60,27 @@ describe('swearjar.scorecard', function () {
       assert.equal(swearjar.profane('this should not be profane'), false);
     });
 });
+
+
+describe('should import bad words', function() {
+
+  it('should load custom config', function () {
+
+    swearjar.loadBadWords('./config/test.json');
+
+    assert.equal(Object.keys(swearjar._badWords).length, 1);
+
+  });
+
+  it('should load custom object', function () {
+
+    swearjar.setBadWords({"continuous": ["profane"],"integration": ["insult"]});
+
+    assert.equal(Object.keys(swearjar._badWords).length, 2);
+
+    swearjar.setBadWords();
+
+    assert.equal(Object.keys(swearjar._badWords).length, 0);
+
+  });
+});

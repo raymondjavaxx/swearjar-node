@@ -1,9 +1,18 @@
 {
   "name": "swearjar",
+  "license": "MIT",
   "description": "Profanity detection and filtering library.",
   "version": "0.2.0",
   "homepage": "https://github.com/raymondjavaxx/swearjar-node",
-  "keywords": ["swear", "curse", "unallowed", "profanity", "clean", "filter", "badwords"],
+  "keywords": [
+    "swear",
+    "curse",
+    "unallowed",
+    "profanity",
+    "clean",
+    "filter",
+    "badwords"
+  ],
   "author": {
     "name": "Ramon Torres",
     "email": "raymondjavaxx@gmail.com",
@@ -21,12 +30,19 @@
   ],
   "main": "lib/swearjar",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 4"
   },
   "devDependencies": {
-    "mocha": "~1.18.2"
+    "mocha": "~4.0.0",
+    "nyc": "^11.3.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha"
+  },
+  "bin": {
+    "swearjar": "bin/swearjar.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0"
   }
 }
