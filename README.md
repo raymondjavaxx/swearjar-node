@@ -6,7 +6,7 @@ Profanity detection and filtering library.  Forked from original repo to add fun
 
 ## Installation
 
-    npm install --save swearjar
+    npm install --save @honeyscience/honey-swearjar
 
 ## Usage
 
