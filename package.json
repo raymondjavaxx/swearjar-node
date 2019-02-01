@@ -1,7 +1,7 @@
 {
   "name": "@honeyscience/honey-swearjar",
   "description": "Profanity detection and filtering library.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "The Honey Team",
     "url": "https://www.github.com/honeyscience"
