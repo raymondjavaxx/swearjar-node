@@ -1,6 +1,7 @@
 const BAD_WORDS = require('./config/en_US.json');
 
 const WORD_SEP_REGEX = /\s+/;
+const ALL_BAD_WORDS_REGEX = new RegExp(Object.keys(BAD_WORDS).map(k => `\\b${k}\\b`).join('|'), 'i');
 
 
 /**
@@ -101,10 +102,16 @@ function isSubstringProfane(text, start = 0, minPartialLength = 3) {
 }
 
 
+function containsBadWords(text) {
+  return (text || '').search(ALL_BAD_WORDS_REGEX) > -1;
+}
+
+
 module.exports = {
   scan,
   profane,
   scorecard,
   censor,
   isSubstringProfane,
+  containsBadWords,
 };
