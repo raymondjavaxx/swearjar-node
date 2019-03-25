@@ -62,3 +62,13 @@ describe('swearjar.scorecard', () => {
     });
   });
 });
+
+
+describe('swearjar.containsBadWords', () => {
+  it('should identify bad sentences (three or more words put together)', () => {
+    assert.equal(swearjar.containsBadWords('water Based Lubricant in sentence is bad'), true);
+  });
+  it('should identify a sentence with out any bad words.', () => {
+    assert.equal(swearjar.containsBadWords('no Bad words in this sentence'), false);
+  });
+});
