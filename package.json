@@ -1,34 +1,39 @@
 {
-  "name": "@honeyscience/honey-swearjar",
-  "description": "Profanity detection and filtering library.",
+  "name": "@honeyscience/swearjar-node",
   "version": "1.0.4",
-  "author": {
-    "name": "The Honey Team",
-    "url": "https://www.github.com/honeyscience"
+  "description": "Profanity detection and filtering library.",
+  "author": "The Honey Team",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/honeyscience/swearjar-node#readme",
+  "repository": {
+    "type": "git",
+    "url": "github:honeyscience/swearjar-node"
+  },
+  "bugs": {
+    "url": "https://github.com/honeyscience/swearjar-node/issues"
+  },
+  "engines": {
+    "node": ">= 6.9.0"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "honey-eslint ./src ./test",
+    "npm-audit": "honey-npm-audit",
+    "test": "mocha",
+    "test-coverage": "NODE_ENV=test nyc --reporter=lcov --reporter=text --reporter=html npm test",
+    "validate-coverage": "nyc check-coverage --lines 90 --functions 90 --branches 90 --statements 90"
+  },
+  "devDependencies": {
+    "@honeyscience/eslint-config": "^1.1.2",
+    "@honeyscience/honey-dev-tools": "^6.7.4",
+    "eslint": "^4.11.0",
+    "mocha": "^4.0.1",
+    "nyc": "^13.3.0"
   },
   "licenses": [
     {
       "type": "MIT",
       "url": "https://github.com/honeyscience/swearjar-node/LICENSE"
     }
-  ],
-  "homepage": "https://github.com/honeyscience/swearjar-node",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:honeyscience/swearjar-node.git"
-  },
-  "main": "src/index.js",
-  "scripts": {
-    "lint": "honey-eslint ./src ./test",
-    "test": "mocha"
-  },
-  "engines": {
-    "node": ">= 6.9.0"
-  },
-  "devDependencies": {
-    "@honeyscience/eslint-config": "^1.1.2",
-    "@honeyscience/honey-dev-tools": "^3.30.0",
-    "eslint": "^4.11.0",
-    "mocha": "^4.0.1"
-  }
+  ]
 }
